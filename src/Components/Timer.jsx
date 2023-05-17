@@ -24,7 +24,7 @@ export function Timer() {
           if (prevTime <= 0) {
             setIsBreak(!isBreak)
             play()
-            return isBreak ? timerDuration : minutesBreak * 60
+            return isBreak ? timerDuration * 60 : minutesBreak * 60
           }
           return prevTime - 1
         })
